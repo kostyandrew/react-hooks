@@ -1,7 +1,7 @@
 // Import React
 import React from "react";
 // Import Spectacle Core tags
-import { Deck, Heading, Slide, Text, Image, Appear } from "spectacle";
+import { Deck, Heading, Slide, Text, Image } from "spectacle";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -9,6 +9,7 @@ import createTheme from "spectacle/lib/themes/default";
 // Require CSS
 import "normalize.css";
 import "./style.css";
+import styled from "styled-components";
 
 const theme = createTheme(
   {
@@ -218,6 +219,30 @@ export default class Presentation extends React.Component {
             module="%2Fsrc%2FModal.jsx"
             title="Portal"
           />
+        </Slide>
+        <Slide
+          style={{
+            backgroundImage:
+              "linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, purple, purple)",
+            backgroundSize: "1800vw 1800vh",
+            backgroundPosition: "center center",
+            animation: "rainbow 18s linear infinite"
+          }}
+        >
+          <SlideHeading>Presentation</SlideHeading>
+          <Image src={require("./resources/frame.png")} />
+        </Slide>
+        <Slide bgColor="pink">
+          <SlideHeading textColor="black">Questions?</SlideHeading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading
+            fit
+            textColor="white"
+            style={{ fontFamily: "Times New Roman" }}
+          >
+            FIN
+          </Heading>
         </Slide>
       </Deck>
     );
